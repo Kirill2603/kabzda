@@ -17,6 +17,10 @@ function App() {
             <OnOff active={false}/>
             <OnOff active={false}/>
             <OnOff active={true}/>
+            <OnOff active={true}/>
+            <OnOff active={false}/>
+            <OnOff active={false}/>
+            <OnOff active={true}/>
             <PageTitle title="My Friends"/>
             <Accordion title="MENU" collapsed={true}/>
             <Accordion title={"USERS"} collapsed={false}/>
