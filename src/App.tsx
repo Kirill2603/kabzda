@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Accordion from "./components/Accordion";
 import Rating from "./components/rating";
+import OnOff from "./components/OnOff";
 
 function PageTitle(props: { title: string }) {
     return <span>{props.title}</span>
@@ -12,6 +13,10 @@ function App() {
         <div className="App">
             <PageTitle title="This is App component"/>
             <Rating value={3}/>
+            <OnOff active={true}/>
+            <OnOff active={false}/>
+            <OnOff active={false}/>
+            <OnOff active={true}/>
             <PageTitle title="My Friends"/>
             <Accordion title="MENU" collapsed={true}/>
             <Accordion title={"USERS"} collapsed={false}/>
