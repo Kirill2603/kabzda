@@ -1,17 +1,17 @@
 import React from "react";
 
-function Accordion() {
+function Accordion(props: {title: string}) {
     return (
         <div>
-            <AccordionTitle />
+            <AccordionTitle title={props.title}/>
             <AccordionBody />
         </div>
     )
 }
 
-function AccordionTitle () {
+function AccordionTitle (props: {title: string}) {
     return (
-        <h3>Menu</h3>
+        <h3>-- {props.title} --</h3>
     )
 }
 
