@@ -4,19 +4,38 @@ type OnOffPropsType = {
     active: boolean
 }
 
-
 const OnOff: React.FC<OnOffPropsType> = ({active}) => {
-    if (active) {
-        return (<div style={{display: 'flex', alignItems: 'center'}}>
-            <button style={{backgroundColor: 'green'}}>On</button>
-            <button>Off</button>
-            <div style={{width: '10px', height: '10px', backgroundColor: 'green', borderRadius: '5px'}}></div>
+
+    const onStyle = {
+        width: '30px',
+        height: '20px',
+        margin: '1px',
+        padding: '5px',
+        border: '1px solid black',
+        backgroundColor: active ? 'green' : ''
+    }
+    const offStyle = {
+        width: '30px',
+        height: '20px',
+        margin: '1px',
+        padding: '5px',
+        border: '1px solid black',
+        backgroundColor: active ? '' : 'red'
+    }
+    const indicatorStyle = {
+        width: '10px',
+        height: '10px',
+        borderRadius: '5px',
+        margin: '5px',
+        border: '1px solid black',
+        backgroundColor: active ? 'green' : 'red'
+    }
+
+        return (<div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+            <div style={onStyle}>On</div>
+            <div style={offStyle}>Off</div>
+            <div style={indicatorStyle}></div>
         </div>)
-    } else return (<div style={{display: 'flex', alignItems: 'center'}}>
-        <button>On</button>
-        <button style={{backgroundColor: 'red'}}>Off</button>
-        <div style={{width: '10px', height: '10px', backgroundColor: 'red', borderRadius: '5px'}}></div>
-    </div>)
 }
 
 export default OnOff

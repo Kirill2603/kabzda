@@ -12,18 +12,19 @@ function App() {
     return (
         <div className="App">
             <PageTitle title="This is App component"/>
+
             <Rating value={3}/>
+
             <OnOff active={true}/>
             <OnOff active={false}/>
             <OnOff active={false}/>
             <OnOff active={true}/>
-            <OnOff active={true}/>
-            <OnOff active={false}/>
-            <OnOff active={false}/>
-            <OnOff active={true}/>
+
             <PageTitle title="My Friends"/>
+
             <Accordion title="MENU" collapsed={true}/>
             <Accordion title={"USERS"} collapsed={false}/>
+
             <Rating value={1}/>
             <Rating value={2}/>
             <Rating value={3}/>
