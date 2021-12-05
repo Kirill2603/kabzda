@@ -5,6 +5,7 @@ import Rating from "./components/rating";
 import OnOff from "./components/OnOff";
 import UncontrolledAccordion from "./components/UncontrolledAccordion";
 import UncontroledRating from "./components/uncontrolledRating";
+import UncontrolledOnOff from "./components/UncontrolledOnOff";
 
 function PageTitle(props: { title: string }) {
     return <span>{props.title}</span>
@@ -40,6 +41,8 @@ function App() {
             {/*<Rating value={3}/>*/}
             {/*<Rating value={4}/>*/}
             {/*<Rating value={5}/>*/}
+
+            <UncontrolledOnOff active={false}  />
         </div>
     );
 }
