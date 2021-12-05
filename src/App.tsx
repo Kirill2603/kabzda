@@ -4,6 +4,7 @@ import Accordion from "./components/Accordion";
 import Rating from "./components/rating";
 import OnOff from "./components/OnOff";
 import UncontrolledAccordion from "./components/UncontrolledAccordion";
+import UncontroledRating from "./components/uncontrolledRating";
 
 function PageTitle(props: { title: string }) {
     return <span>{props.title}</span>
@@ -23,16 +24,18 @@ function App() {
 
             <PageTitle title="My Friends"/>
 
-            <Accordion title="MENU" collapsed={true}/>
-            <Accordion title={"USERS"} collapsed={false}/>
+            {/*<Accordion title="MENU" collapsed={true}/>*/}
+            {/*<Accordion title={"USERS"} collapsed={false}/>*/}
             
             <UncontrolledAccordion title={'Uncontrolled'} />
 
-            <Rating value={1}/>
-            <Rating value={2}/>
-            <Rating value={3}/>
-            <Rating value={4}/>
-            <Rating value={5}/>
+            <UncontroledRating />
+
+            {/*<Rating value={1}/>*/}
+            {/*<Rating value={2}/>*/}
+            {/*<Rating value={3}/>*/}
+            {/*<Rating value={4}/>*/}
+            {/*<Rating value={5}/>*/}
         </div>
     );
 }

@@ -7,7 +7,7 @@ type UncontrolledAccordionPropsType = {
 
 const UncontrolledAccordion: React.FC<UncontrolledAccordionPropsType> = ({title}) => {
 
-    const [collapsed, setCollapsed] = useState<boolean>(true)
+    const [collapsed, setCollapsed] = useState<boolean>(false)
 
     return collapsed ?
         <div>
