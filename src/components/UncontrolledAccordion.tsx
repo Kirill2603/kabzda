@@ -22,7 +22,7 @@ const UncontrolledAccordion: React.FC<UncontrolledAccordionPropsType> = ({title}
 
 type AccordionTitlePropsType = {
     title: string,
-    setCollapsed: any
+    setCollapsed: (collapsed: boolean) => void
     collapsed: boolean
 }
 

@@ -2,38 +2,32 @@ import React, {useState} from "react";
 import emptyStar from "../img/empty-star.svg";
 import fullStar from '../img/full-star.svg'
 
-type UncontroledRatingPropsType = {
-    // value: 1 | 2 | 3 | 4 | 5
-}
 
-const UncontroledRating: React.FC<UncontroledRatingPropsType> = () => {
+const UncontroledRating: React.FC = () => {
 
-        const [value, setValue] = useState(1)
+        const [value, setValue] = useState<number>(1)
 
         return (
             <div>
-                <Star selected={value > 0} setValue={setValue} value={1}/>
-                <Star selected={value > 1} setValue={setValue} value={2}/>
-                <Star selected={value > 2} setValue={setValue} value={3}/>
-                <Star selected={value > 3} setValue={setValue} value={4}/>
-                <Star selected={value > 4} setValue={setValue} value={5}/>
+                <Star selected={value > 0} setValue={() => setValue(1)}/>
+                <Star selected={value > 1} setValue={() => setValue(2)}/>
+                <Star selected={value > 2} setValue={() => setValue(3)}/>
+                <Star selected={value > 3} setValue={() => setValue(4)}/>
+                <Star selected={value > 4} setValue={() => setValue(5)}/>
             </div>
         )
 }
 
 type StarPropsType = {
     selected: boolean
-    setValue: (value: number) => void
-    value: number
+    setValue: () => void
 }
 
-const Star: React.FC<StarPropsType> = ({selected, setValue, value}) => {
-    return selected ?
-        <img onClick={() => setValue(value)}
-        src={fullStar} alt="full"/>
-        :
-        <img onClick={() => setValue(value)}
-        src={emptyStar} alt="empty"/>
+const Star: React.FC<StarPropsType> = ({selected, setValue}) => {
+    return <img src={selected ? fullStar : emptyStar}
+                alt="*"
+                style={{cursor: 'pointer'}}
+                onClick={setValue}/>
 }
 
 export default UncontroledRating
