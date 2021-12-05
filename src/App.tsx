@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Accordion from "./components/Accordion";
 import Rating from "./components/rating";
@@ -10,7 +10,11 @@ function PageTitle(props: { title: string }) {
     return <span>{props.title}</span>
 }
 
+
 function App() {
+
+    const [collapsed, setCollapsed] = useState<boolean>(false)
+
     return (
         <div className="App">
             <PageTitle title="This is App component"/>
@@ -24,8 +28,8 @@ function App() {
 
             <PageTitle title="My Friends"/>
 
-            {/*<Accordion title="MENU" collapsed={true}/>*/}
-            {/*<Accordion title={"USERS"} collapsed={false}/>*/}
+            <Accordion title="MENU" collapsed={collapsed} setCollapsed={setCollapsed}/>
+            <Accordion title={"USERS"} collapsed={collapsed} setCollapsed={setCollapsed}/>
             
             <UncontrolledAccordion title={'Uncontrolled'} />
 
