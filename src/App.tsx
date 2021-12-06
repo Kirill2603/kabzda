@@ -6,6 +6,7 @@ import OnOff from "./components/OnOff";
 import UncontrolledAccordion from "./components/UncontrolledAccordion";
 import UncontroledRating from "./components/uncontrolledRating";
 import UncontrolledOnOff from "./components/UncontrolledOnOff";
+import UncontrolledInput, {UnconrolledInput2} from "./components/UncontrolledInput";
 
 function PageTitle(props: { title: string }) {
     return <span>{props.title}</span>
@@ -24,25 +25,22 @@ function App() {
 
             <OnOff active={true}/>
             <OnOff active={false}/>
-            <OnOff active={false}/>
-            <OnOff active={true}/>
 
             <PageTitle title="My Friends"/>
 
-            <Accordion title="MENU" collapsed={collapsed} setCollapsed={setCollapsed}/>
-            <Accordion title={"USERS"} collapsed={collapsed} setCollapsed={setCollapsed}/>
-            
+            {/*<Accordion title="MENU" collapsed={collapsed} setCollapsed={setCollapsed}/>*/}
+            {/*<Accordion title={"USERS"} collapsed={collapsed} setCollapsed={setCollapsed}/>*/}
+
             <UncontrolledAccordion title={'Uncontrolled'} />
 
             <UncontroledRating />
 
-            {/*<Rating value={1}/>*/}
-            {/*<Rating value={2}/>*/}
-            {/*<Rating value={3}/>*/}
-            {/*<Rating value={4}/>*/}
-            {/*<Rating value={5}/>*/}
-
             <UncontrolledOnOff active={false}  />
+
+            <UncontrolledInput />
+
+            <UnconrolledInput2 />
+
         </div>
     );
 }
