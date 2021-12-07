@@ -7,6 +7,9 @@ import UncontrolledAccordion from "./components/UncontrolledAccordion";
 import UncontroledRating from "./components/uncontrolledRating";
 import UncontrolledOnOff from "./components/UncontrolledOnOff";
 import UncontrolledInput, {UnconrolledInput2} from "./components/UncontrolledInput";
+import ControlledInput from "./components/controlledInput";
+import ControlledCheckBox from "./components/controlledCheckBox";
+import ControlledSelect from "./components/controlledSelect";
 
 function PageTitle(props: { title: string }) {
     return <span>{props.title}</span>
@@ -41,6 +44,11 @@ function App() {
 
             <UnconrolledInput2 />
 
+            <ControlledInput />
+
+            <ControlledCheckBox />
+
+            <ControlledSelect />
         </div>
     );
 }
